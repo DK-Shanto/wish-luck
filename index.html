@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Wish</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8e8ee;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        input {
+            padding: 10px;
+            width: 200px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff6699;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #ff3366;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Your Student ID</h2>
+        <input type="text" id="studentId" placeholder="Enter Your Student ID">
+        <button onclick="validateId()">Get Wish</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function validateId() {
+            var studentId = document.getElementById("studentId").value;
+            if (studentId === "170209") {
+                window.location.href = "wish.html";
+            } else {
+                document.getElementById("message").innerHTML = "Please enter Your Student ID!";
+            }
+        }
+    </script>
+</body>
+</html>
